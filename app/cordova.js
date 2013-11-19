@@ -1,0 +1,2 @@
+// With a cordova build, a 'cordova.js' file is created and needs to be part of the built index.html file.
+// This a stub version of that file so we can include the reference on our development index.html file
