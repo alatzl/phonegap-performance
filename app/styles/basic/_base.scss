@@ -8,16 +8,22 @@
 }
 
 html {
-  // font-size: $base-font-size;
+  font-size: $base-font-size;
   height: 100%;
 }
 
 body {
-  // font-family: $base-font-family;
-  // color: $p-color;
-  // width: $width;
-  // max-width: $max-width;
-  // min-width: $min-width;
+  font-family: $base-font-family;
+  color: $p-color;
+  width: $width;
+  min-width: $min-width;
+  max-width: $max-width;
   height: 100%;
   margin: 0 auto;
+}
+
+.container {
+  position: relative; // to contain its children and their widths
+  height: 100%;
+  overflow-x: hidden;
 }

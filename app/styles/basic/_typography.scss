@@ -1,0 +1,100 @@
+p {
+  font-family: $base-font-family;
+  font-size: $p-size;
+  line-height: $p-line-height;
+  color: $p-color;
+  margin-bottom: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  line-height: $base-line-height;
+}
+
+h1 {
+  font-size: $h1-size;
+  color: $h1-color;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: $h2-size;
+  color: $h2-color;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: $h3-size;
+  font-weight: bold;
+  color: $h3-color;
+  margin-bottom: 8px;
+}
+
+h4 {
+  font-size: $h4-size;
+  color: $h4-color;
+  margin-bottom: 8px;
+}
+
+h5 {
+  font-size: $h5-size;
+  color: $h5-color;
+  margin-bottom: 5px;
+}
+
+h6 {
+  font-size: $h6-size;
+  color: $h6-color;
+  margin-bottom: 2px;
+}
+
+code, pre {}
+
+blockquote {}
+
+nav ol, nav ul, ol, ul {
+  list-style: none;
+  list-style-image: none;
+  margin: 0;
+  padding: 0;
+}
+
+ol {
+  list-style: decimal;
+}
+
+ol, ul {
+  margin-left: 0;
+}
+
+li {}
+
+dl dt {}
+
+dl dd {}
+
+a, a:visited {
+  color: $link-color;
+  text-decoration: underline;
+  outline: 0;
+
+  &:hover, &:active {
+    color: $link-hover-color;
+  }
+}
+
+table {
+  @extend %full-width;
+
+  thead {
+    @extend %center;
+  }
+
+  tbody {
+    font-size: 1.2em;
+    line-height: $base-line-height;
+  }
+}
+
+details {}
+summary {}

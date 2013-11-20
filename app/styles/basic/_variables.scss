@@ -7,6 +7,11 @@ $max-width: 480px;
 
 // Colors
 $brand: #135889; // blue
+$brand-text: #1864A1; // blue used for all NextGear-branded text
+$brand-light: #17659D; // slightly lighter than brand; resembles #0266A2
+$brand-bright: #1879BB; // brighter blue for buttons; resembles #1B78C0
+$brand-dark: #0F4C76; // darker blue for button down states and shadows; slight greenish tint
+$brand-darkest: #115186; // dark blue shadow for buttons and text
 
 // Fonts
 $base-font-family: Helvetica, Arial, sans-serif;
@@ -36,11 +41,27 @@ $h6-color: #434343;
 $link-color: #434343;
 $link-hover-color: #434343;
 
-// Forms
-// $input-placeholder-text: #999;
-// $input-text: #434343;
-// $label-text: #999;
-// $input-stroke-color: #ddd;
+// BUTTONS
+// Primary enabled: light text on dark blue
+$btn-text-enabled: #EBEBF0;
+$btn-color-enabled: #135889;
+$btn-stroke-enabled: #15436D;
 
-// $input-bkgd: #fff;
-// $input-bkgd-disabled: #ddd;
+// Primary enabled and active (hovered): light text on darker blue
+$btn-text-active: #EBEBF0;
+$btn-color-active: #0E4A74;
+$btn-stroke-active: #0B3D61;
+
+// Primary disabled
+$btn-text-disabled: #666;
+$btn-color-disabled: #999;
+$btn-stroke-disabled: #757575;
+
+// Secondary enabled:
+$btn2-text-enabled: #EBEBF0;
+$btn2-color-enabled: #555;
+$btn2-stroke-enabled: #444;
+
+// Secondary enabled & active:
+$btn2-color-active: #444;
+$btn2-stroke-active: #333;

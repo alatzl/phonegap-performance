@@ -4,8 +4,10 @@
 
 @import "basic/reset";
 @import "basic/variables";
+// @import "../components/sass-bootstrap/lib/bootstrap";
 @import "basic/base";
+@import "basic/helpers";
+@import "basic/typography";
 
-.content {
-    color: purple;
-}
+@import "common/header";
+@import "common/content";

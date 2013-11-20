@@ -17,8 +17,25 @@
 </head>
   <body ng-app="phonegapPerformanceApp">
     <!-- Add your site or application content here -->
-    <div class="container" ng-view=""></div>
+    <div class="container" ng-controller="PageCtrl" ng-class="{ 'nav-open': isNavOpen() }">
+      <div class="nav-drawer">
+        <nav>
+          <ul class="nav-list">
+            <li class="nav-primary"><a href="#">A link</a></li>
+            <li class="nav-primary"><a href="#">Another link</a></li>
+            <li class="nav-primary"><a href="#">A link with children</a>
+              <ul class="nav-list">
+                <li class="nav-secondary"><a href="#">A child link</a></li>
+                <li class="nav-secondary"><a href="#">Another child link</a></li>
+              </ul>
+            </li>
+            <li class="nav-primary"><a href="#">A fourth link</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="inner" ng-view=""></div>
 
+    </div>
 
     <!-- build:js scripts/components.js -->
     <script src="components/angular/angular.js"></script>
@@ -29,6 +46,7 @@
 
     <!-- build:js scripts/scripts.js -->
     <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/page.js"></script>
     <script src="scripts/controllers/main.js"></script>
     <!-- endbuild -->
 

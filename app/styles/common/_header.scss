@@ -1,0 +1,88 @@
+// Header & Nav
+
+.top {
+  @extend %full-width;
+  height: 50px;
+  position: relative;
+  top: 0;
+  padding: 0 10px;
+  background: lighten(tint($brand-light, 10%), 10%);
+
+  .page-title {
+    @extend %center;
+    font: bold 1.33rem/1 $base-font-family;
+    position: absolute;
+    height: 100%;
+    color: white;
+    padding: 15px 0 0;
+  }
+
+  .nav-btn {
+    @extend %float-r;
+    @include border-radius(2px);
+    @include box-shadow(0 2px 0 $brand-darkest);
+    display: inline-block;
+    background: $brand-bright;
+    width: 40px;
+    height: 30px;
+    margin: 10px 0 10px 10px;
+    border: 0;
+    cursor:pointer;
+
+    span {
+      @include border-radius(1px);
+      @include box-shadow(0 -1px 0 $brand-darkest);
+      display: block;
+      width: 24px;
+      height: 4px;
+      background: #efefef;
+      margin: 2px auto 1px;
+    }
+
+    &:active {
+      @include box-shadow(none);
+      background: $brand-dark;
+
+      span {
+        @include box-shadow(none);
+      }
+    }
+  }
+}
+
+.nav-drawer, .inner {
+  -webkit-transition: -webkit-transform 400ms ease;
+  -moz-transition: -moz-transform 400ms ease;
+  -o-transition: -o-transform 400ms ease;
+  transition: transform 400ms ease;
+
+  overflow-y: scroll;
+}
+
+.nav-drawer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  @include translate3d(100%,0,0);
+
+  background: black;
+  width: 83%;
+  min-width: 215px;
+  height: 100%;
+  z-index: 300;
+
+  .nav-open & {
+    @include translate3d(0,0,0);
+  }
+}
+
+.inner {
+  position: relative;
+  top: 0;
+  left: 0;
+  @include translate3d(0,0,0);
+
+  .nav-open & {
+    @include translate3d(-83%,0,0);
+  }
+}

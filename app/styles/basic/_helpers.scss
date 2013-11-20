@@ -1,0 +1,52 @@
+// HELPERS
+
+%full-width {
+  width: 100%;
+}
+
+%half-width {
+  width: 50%;
+}
+
+%quarter-width {
+  width: 25%;
+}
+
+%pushed {
+  margin-left: 11px;
+}
+
+%heavy {
+  font-weight: bold;
+}
+
+%small {
+  font-size: 0.92rem;
+}
+
+%center {
+  text-align: center;
+}
+
+%right-align {
+  text-align: right;
+}
+
+%float-l {
+  float: left;
+}
+
+%float-r {
+  float: right;
+}
+
+%clearfix {
+  &:before, &:after {
+    content: '';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
