@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('phonegapPerformanceApp', [])
+angular.module('phonegapPerformanceApp', ['btford.phonegap.ready'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
