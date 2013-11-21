@@ -39,24 +39,12 @@ module.exports = function (grunt) {
         files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
         tasks: ['compass']
       }
-      // livereload: {
-      //   options: {
-      //     livereload: LIVERELOAD_PORT
-      //   },
-      //   files: [
-      //     '<%= yeoman.app %>/{,*/}*.html',
-      //     '{.tmp,<%= yeoman.app %>}/styles/{,*/}*.css',
-      //     '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
-      //     '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
-      //   ],
-      //   tasks: ['livereload']
-      // }
     },
     connect: {
       options: {
         port: 9000,
         // Change this to '0.0.0.0' to access the server from outside.
-        hostname: 'localhost'
+        hostname: '0.0.0.0'
       },
       livereload: {
         options: {

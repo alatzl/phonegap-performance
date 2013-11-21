@@ -5,4 +5,7 @@ angular.module('phonegapPerformanceApp')
 
     $scope.isNavOpen = drawerState.isOpen;
 
+    $scope.onOverlayClicked = function() {
+      drawerState.close();
+    }
   });

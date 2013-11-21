@@ -18,23 +18,9 @@
   <body ng-app="phonegapPerformanceApp">
     <!-- Add your site or application content here -->
     <div class="container" ng-controller="PageCtrl" ng-class="{ 'nav-open': isNavOpen() }">
-      <div class="nav-drawer">
-        <nav>
-          <ul class="nav-list">
-            <li class="nav-primary"><a href="#">A link</a></li>
-            <li class="nav-primary"><a href="#">Another link</a></li>
-            <li class="nav-primary"><a href="#">A link with children</a>
-              <ul class="nav-list">
-                <li class="nav-secondary"><a href="#">A child link</a></li>
-                <li class="nav-secondary"><a href="#">Another child link</a></li>
-              </ul>
-            </li>
-            <li class="nav-primary"><a href="#">A fourth link</a></li>
-          </ul>
-        </nav>
-      </div>
+      <div nav-drawer></div>
       <div class="inner" ng-view=""></div>
-
+      <div class="overlay" ng-click="onOverlayClicked()" ng-show="isNavOpen()"></div>
     </div>
 
     <!-- build:js scripts/components.js -->
@@ -48,6 +34,7 @@
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/page.js"></script>
     <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/directives/navDrawer/navDrawer.js"></script>
     <!-- endbuild -->
 
     <!-- build:js scripts/vendor.js -->

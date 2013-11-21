@@ -6,7 +6,7 @@
   position: relative;
   top: 0;
   padding: 0 10px;
-  background: lighten(tint($brand-light, 10%), 10%);
+  background: $blue;
 
   .page-title {
     @extend %center;
@@ -20,9 +20,9 @@
   .nav-btn {
     @extend %float-r;
     @include border-radius(2px);
-    @include box-shadow(0 2px 0 $brand-darkest);
+    @include box-shadow(0 2px 0 rgba(0,0,0,0.2));
     display: inline-block;
-    background: $brand-bright;
+    background: $green;
     width: 40px;
     height: 30px;
     margin: 10px 0 10px 10px;
@@ -31,7 +31,7 @@
 
     span {
       @include border-radius(1px);
-      @include box-shadow(0 -1px 0 $brand-darkest);
+      @include box-shadow(0 -1px 0 rgba(0,0,0,0.3));
       display: block;
       width: 24px;
       height: 4px;
@@ -41,11 +41,7 @@
 
     &:active {
       @include box-shadow(none);
-      background: $brand-dark;
-
-      span {
-        @include box-shadow(none);
-      }
+      background: $yellow;
     }
   }
 }
@@ -57,6 +53,7 @@
   transition: transform 400ms ease;
 
   overflow-y: scroll;
+  height: 100%;
 }
 
 .nav-drawer {
@@ -65,7 +62,7 @@
   right: 0;
   @include translate3d(100%,0,0);
 
-  background: black;
+  background: #eeeeee;
   width: 83%;
   min-width: 215px;
   height: 100%;
@@ -84,5 +81,75 @@
 
   .nav-open & {
     @include translate3d(-83%,0,0);
+  }
+}
+
+.nav-list {
+  margin: 0;
+  a {
+    display: block;
+    font-size: 1.33rem;
+    text-decoration: none;
+  }
+}
+
+.nav-primary {
+  border-top: 1px solid $gray;
+
+  &:last-child {
+    border-bottom: 1px solid $gray;
+  }
+
+  & > a, & > a:visited {
+    padding: 15px;
+
+    &:active, &:hover {
+      background-color: $green;
+      text-decoration: none;
+    }
+  }
+}
+
+.nav-secondary {
+  border-top: 1px solid $gray;
+
+  a, a:visited {
+    color: lighten($navy, 25%);
+    background-color: #ececec;
+    padding: 15px 15px 15px 30px;
+
+    &:active, &:hover {
+      background-color: $yellow;
+      color: white;
+
+    }
+  }
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  &:after {
+    content: '+';
+    position: absolute;
+    top: 15px;
+    right: 20px;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.dropdown-menu {
+  display: none;
+}
+
+.open {
+  & > .dropdown-menu {
+    display: block;
+    background: red;
   }
 }

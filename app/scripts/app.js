@@ -1,13 +1,13 @@
 'use strict';
 
-angular.module('phonegapPerformanceApp', ['btford.phonegap.ready'])
+angular.module('phonegapPerformanceApp', ['btford.phonegap.ready', 'ui.bootstrap'])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
+      .when('/main', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/main'
       });
   });
